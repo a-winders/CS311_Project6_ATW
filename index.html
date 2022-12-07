@@ -8,150 +8,67 @@
         <link rel="stylesheet" href="css/properties.css" />
     </head>
 
-<div class="container">
-    <!-- Page header -->
-    <h1> Bellarmine Financials - Balance Sheet Calculator </h1>
-    
-
     <body>
-    <!-- Sub-heading -->
-    <!-- <div id="assets"> -->
-    <p> <strong> Assets</strong></p>
-    </div> <!-- end -->
+        <div class="container">
+        <header> Bellarmine Financials - Balance Sheet Calculator</header>
+
+        <div class="parent">
+            <div class="div1"> 
+                <strong>Current Assets </strong> 
+            <div class="button1">    
+                <input type="button" name="answer" value="Add Current Assets" onclick="onButtonClick()" />
+        <input class="hide" type="text" id="textInput" value="" >
+                <!-- <button id="assetsButton" onclick="showInputBoxes()"> Add Current Assets</button> -->
+            </div>
+                <br />
+
+                <strong>Investment Property & Equipment </strong> 
+            <div class="button2">       
+                <input type="button" name="answer" value="Add Investment Property & Equipment" onclick="onButtonClick()" />
+                <input class="hide" type="text" id="textInput" value="" />
+            </div> 
+                <br />
+
+                <strong>Intangibles </strong> 
+                <div class="button2">       
+                    <input type="button" name="answer" value="Add Intangibles" onclick="onButtonClick()" />
+                    <input class="hide" type="text" id="textInput" value="" />
+                </div>
+            </div> <!--end div1-->
+            
+            <div class="div2">
+                <strong>Current Liabilities </strong> <button id="assetsButton" onclick="showInputBoxes()"> Add Current Liabilities</button>
+                <br />
+                <strong>Long-Term Liabilities </strong> <button id="assetsButton" onclick="showInputBoxes()"> Add Long-Term Liabilities</button>
+                <br />
+                <strong>Total Position</strong>
+                <br />
+                <button id="calculatePosition" class="calculate"> Calculate Position</button>
+                <br />
+                <strong>Total Assets:</strong>
+                <br />
+                <strong>Total Liabilities:</strong>
+                <br />
+                <strong>Position:</strong>
+            </div> <!--end div2-->
+
+            <div class="div3">
+                <h1>Assets</h1>
+            </div> <!--end div3-->
+
+            <div class="div4">
+                <h2>Liabilities</h2>
+            </div>
+
+            </div> <!--end parent-->
+    
+        </div> <!-- end div class "content"-->
+
+        <footer>&copy Bellarmine University 2022</footer>
+    
+    </div> <!-- end div class "container"--> 
+
+    <script src="js/calculator.js"></script>
+
 </body>
-
-    <!-- Current Assets - Input Boxes -->
-
-    <!-- <div id="assetInput">
-        <label for="cash"><strong>Cash: </strong></label>
-        <input id="cash" name="cash" control-id="ControlID-1"> <br />
-        
-        <label for="inventory"><strong>Inventory: </strong></label>
-        <input id="inventory" name="inventory" control-id="ControlID-2"> <br />
-        
-        <label for="supplies"><strong>Supplies: </strong></label>
-        <input id="supplies" name="supplies" control-id="ControlID-3"> <br />
-
-        <label for="tempInvestments"><strong>Temporary Investments: </strong></label>
-        <input id="tempInvestments" name="tempInvestments_Assets" control-id="ControlID-4"> <br />
-
-        <p> <strong> Total Current Assets: </strong></p>
-    </div> end
-
-    <!-- Investment Property & Equipment - Input Boxes -->
-    <!-- <div id="investmentInput"> -->
-        
-        <!-- Used to separate my sections of boxes -->
-        <!-- <br />  -->
-        
-        <!-- Calculation boxes -->
-        <!-- <label for="land"><strong>Land: </strong></label>
-        <input id="land" name="land" control-id="ControlID-5"> <br />
-
-        <label for="building"><strong>Building and Improvements: </strong></label>
-        <input id="building" name="building" control-id="ControlID-6"> <br />
-
-        <label for="equipment"><strong>Equipment: </strong></label>
-        <input id="equipment" name="equipment" control-id="ControlID-7"> <br />
-
-        <label for="tempInvestments"><strong>Building and Improvements: </strong></label>
-        <input id="tempInvestments" name="tempInvestments_Investment" control-id="ControlID-8"> <br />
-
-        <label for="building"><strong>Building and Improvements: </strong></label>
-        <input id="building" name="building" control-id="ControlID-9"> <br />
-
-        <p> <strong> Total Investment Property and Equipment: </strong></p> -->
-    <!-- </div> end -->
-
-    <!-- Intangibles - Input Boxes -->
-    <!-- <div id="intangiblesInput"> -->
-
-         <!-- Used to separate my sections of boxes -->
-         <!-- <br /> -->
-
-           <!-- Calculation boxes -->
-        <!-- <label for="tradeNames"><strong>Trade Names: </strong></label>
-        <input id="tradeNames" name="tradeNames" control-id="ControlID-10"> <br />
-        
-        <label for="goodWill"><strong>Goodwill: </strong></label>
-        <input id="goodWill" name="goodWill" control-id="ControlID-11"> <br />
-
-        <p> <strong> Total Intangibles: </strong></p> -->
-    <!-- </div> end -->
-
-
-    <!-- Current Liabilities - Input Boxes -->
-    <!-- <div id="currentLiabilitiesInput"> -->
-
-         <!-- Used to separate my sections of boxes -->
-         <!-- <br /> -->
-
-           <!-- Calculation boxes -->
-        <!-- <label for="accountsPayables"><strong>Accounts Payable: </strong></label>
-        <input id="accountsPayables" name="accountsPayables" control-id="ControlID-12"> <br />
-        
-        <label for="notesPayable"><strong>Notes Payable: </strong></label>
-        <input id="notesPayable" name="notesPayable" control-id="ControlID-13"> <br />
-
-        <label for="interestPayable"><strong>Interest Payable: </strong></label>
-        <input id="interestPayable" name="interestPayable" control-id="ControlID-14"> <br />
-
-        <label for="wagesPayable"><strong>Wages Payable: </strong></label>
-        <input id="wagesPayable" name="wagesPayable" control-id="ControlID-15"> <br />
-
-        <label for="accruedExpenses"><strong>Accrued Expenses: </strong></label>
-        <input id="accruedExpenses" name="accruedExpenses" control-id="ControlID-16"> <br />
-
-        <p> <strong> Total Current Liabilities: </strong></p> -->
-
-    <!-- </div> end -->
-
-    <!-- Long-Term Liabilities - Input Boxes -->
-    <!-- <div id="longTermLiabilitiesInput"> -->
-
-        <!-- Used to separate my sections of boxes -->
-        <!-- <br /> -->
-
-        <!-- Calculation boxes -->
-        <!-- <label for="notesPayable"><strong>Notes Payable: </strong></label>
-        <input id="notesPayable" name="notesPayable" control-id="ControlID-17"> <br />
-
-        <label for="bondsPayable"><strong>Bonds Payable: </strong></label>
-        <input id="bondsPayable" name="bondsPayable" control-id="ControlID-18"> <br /> -->
-    <!-- </div> end -->
-
-
-        </div> <!-- End container div -->
-
-    <!-- Buttons -->
-        <p> Current Assets </p>
-        <button id="currentAssets" class="addButton"> Add Current Assets</button>
-        <p> Investment Property & Equipment </p>
-        <button id="addInvestment" class="addButton"> Add Investment Property & Equipment</button>
-        <p> Intangibles </p>
-        <button id="addIntangibles" class="addButton"> Add Current Assets</button>
-        <p> Current Liabilities </p>
-        <button id="addCurrentLiabilities" class="addButton"> Add Current Liabilities</button>
-        <p> Long-term Liabilities </p>
-        <button id="addLongTermLiabilities" class="addButton"> Add Long-term Liabilities</button>
-        
-    </div> <!-- end -->
-
-        
-    <!-- Calculated totals -->
-    <div id="totals">
-        <p> <strong> Total Position</strong> </p>
-        <button id="calculatePosition" class="calculate"> Calculate Position</button>
-        <p> Total Assets:  </p>
-        <p> Total Liabilities:  </p>
-        <p> Position:  </p>
-        </div> <!-- end -->
-
-    <!-- Footer -->
-    <div id="footer">
-    <footer> 
-        <p>&copy Bellarmine Univeristy 2022</p>
-    </footer>
-    </div> <!-- end div footer -->
-
-</div> <!-- end div container-->
+</html>

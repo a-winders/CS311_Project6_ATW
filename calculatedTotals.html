@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title> Calculated Column Totals </title>
+        <link rel="stylesheet" href="css/calculatedTotalsStyleSheet.css" />
+    </head>
+
+    <body>
+        <div class="container">
+        <header> Calculated Column Totals</header>
+
+        <div class="parent">
+            <div class="div1"> 
+                
+            <div id="assets">
+                <form onsubmit="return addAssetTotals();">
+                <h1> <strong>Current Assets </strong> </h1>
+                    <strong>Cash:</strong><input type="number" id="varA" required value="5000.00"/> <br />
+                    <strong>Inventory:</strong><input type="number" id="varB" required value="25000.00"/> <br />
+                    <strong>Supplies:</strong><input type="number" id="varC" required value="3000.00"/> <br />
+                    <strong>Temporary Investments:</strong><input type="number" id="varD" required value="15000.00"/> <br />
+                    <strong>Total Current Assets:</strong><input type="number" id="varResult" readonly/> <br />
+                    <button id="calculatePosition" class="calculate"> Calculate Position</button>  <br />
+                </form>    
+
+                <form onsubmit="return addInvestmentTotals();">   
+                <h2> <strong>Investment Property & Equipment </strong> </h2>
+                    <strong>Land:</strong><input type="number" id="varA" required value="23000.00"/> <br />
+                    <strong>Building and Improvements:</strong><input type="number" id="varB" required value="117000.00"/> <br />
+                    <strong>Equipment:</strong><input type="number" id="varC" required value="40000.00"/> <br />
+                    <strong>Temporary Investments:</strong><input type="number" id="varD" required value="15000.00"/> <br />
+                    <strong>Total Investment Property and Equipment:</strong><input type="number" id="varResult" readonly/> <br />
+                    <button id="calculatePosition" class="calculate"> Calculate Position</button>  <br />
+                </form>    
+
+                <h3> <strong>Intangibles </strong> </h3>  
+                    <strong>Trade Names:</strong><input type="number" id="varI" required value="75000.00"/> <br />
+                    <strong>Goodwill:</strong><input type="number" id="varJ" required value="9000.00"/> <br />
+                    <button id="calculatePosition" class="calculate"> Calculate Position</button>  <br />
+
+                <h4> <strong> Current Liabilities</strong></h4>
+                    <strong>Accounts Payable:</strong><input type="number" id="varK" required value="40000.00"/> <br />
+                    <strong>Notes Payable:</strong><input type="number" id="varL" required value="7000.00"/> <br />
+                    <strong>Interest Payable:</strong><input type="number" id="varM" required value="2000.00"/> <br />
+                    <strong>Accounts Payable:</strong><input type="number" id="varN" required value="40000.00"/> <br />
+                    <strong>Wages Payable:</strong><input type="number" id="varO" required value="7500.00"/> <br />
+                    <strong>Accrued Payable:</strong><input type="number" id="varP" required value="40000.00"/> <br />
+                    <strong>Total Current Liabilities:</strong><input type="number" id="varResult" readonly/> <br />
+                    <button id="calculatePosition" class="calculate"> Calculate Position</button>
+                    <br />
+                    
+                
+                <h5> <strong> Long-Term Liabilities</strong></h5>
+                    <strong>Notes Payable:</strong><input type="number" id="varK" required value="33000.00"/> <br />
+                    <strong>Bonds Payable:</strong><input type="number" id="varK" required value="47000.00"/> <br />
+                    <button id="calculatePosition" class="calculate"> Calculate Position</button>
+
+                <h6> <strong> Total Position</strong></h6>    
+                <strong>Total Assets:</strong><input type="number" id="varResult" readonly/> <br />
+                <strong>Total Liabilities:</strong><input type="number" id="varResult" readonly/> <br />
+                <strong>Position:</strong><input type="number" id="varResult" readonly/> <br />
+                <button id="calculatePosition" class="calculate"> CALCULATE TOTAL POSITION</button>  <br />
+                
+            </form> <!--end calculated forms-->
+            </div> <!--end div assets-->
+
+
+
+            </div> <!--end parent-->
+    
+        </div> <!-- end div class "content"-->
+
+        <footer>&copy Bellarmine University 2022</footer>
+    
+    </div> <!-- end div class "container"--> 
+
+    <script src="js/calculator.js"></script>
+
+</body>
+</html>
