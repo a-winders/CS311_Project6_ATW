@@ -1,19 +1,33 @@
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align:left;
-    background-color: #752936;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    background-color: #E0B341;
 }
 
 h1{
+    display: flexbox;
+    height:
+    flex-direction: row;
     color: white;
+    padding: 10px;
+    background-color: #752936;
+}
+
+.container{
+    display: grid;
+    justify-items: left;
+    margin-top: 500px;
 }
 
 #assets {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: ;
     justify-content: left;
     font-size: 125%;
-    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-bottom: auto;
     margin-left: 2px;
     color: white;
     background-color: black;
@@ -21,25 +35,22 @@ h1{
 
 #nav {
     display: grid;
-    height: auto;
     grid-template-rows: 50px;
     font-weight: bold;
-    grid-auto-rows: auto;
     justify-content: left;
-    background-color: #E0B341;
 }
 
 #totals {
     display: grid;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: right;
     font-size: 110%;
     font-weight: bold;
-    background-color: #E0B341;
 }
 
 #footer {
     display: flexbox;
+    padding: 10px;
     flex-direction: row;
     justify-content: left;
     color: white;
